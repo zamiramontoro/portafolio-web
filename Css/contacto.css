@@ -1,0 +1,20 @@
+.contacto{
+    margin-top: 5rem;
+    flex-direction: column; /*esto permite centrar el titulo*/
+    padding: 1rem;
+    background-color: var(--fondo-contacto);
+    text-align: center;
+    width: fit-content;
+}
+
+.contacto h2{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+iframe{
+    border: none;
+    width: 85vw;
+    height: 20rem;
+}

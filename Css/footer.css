@@ -1,0 +1,143 @@
+/* Estilos generales para el footer */
+footer{
+    background-color: rgb(3, 40, 109); /*fondo del footer en color gris oscuro*/
+    color: aliceblue; /*texto color blanco*/
+    padding: 20px 0; /*espacio interno arriba y abajo*/
+    text-align: center;/*centrar el texto*/
+}
+
+/*contenedor principal del footer*/
+.footer-container {
+    max-width: 1200px; /*ancho maximo del contenedor*/
+    margin: 0 auto; /*centrar el contenedor horizontalmente*/
+    display: flex; /*usar flexbox para el layput */
+    flex-direction: column; /*colocar los elementos en una columna*/
+    align-items: center; /*centrar los elementos horizontalmente*/
+    justify-content: center;
+    text-align: center;
+    min-height: 120px;
+}
+
+/*Estilos para la seccion de informacion del footer*/
+.footer-info {
+    margin-bottom: 10px; /*espacio debajo de la informacion*/
+}
+
+/*Estilos para la seccion de enlaces a redes sociales*/
+.footer-social{
+display: flex; /*usar flexbox para los iconos de redes sociales*/
+justify-content: center; /*centrar los iconos horizontalmente*/
+gap: 15px; /*Espacio entre los iconos*/
+}
+
+/*Estilos para cada enlace de red social*/
+.footer-social a{
+display: inline-flex; /*usar flexbox para centrar el contenido del enlace*/
+align-items: center; /*centrar verticalmente*/
+justify-content: center; /*centrar horizontalmente*/
+width: 40px; /*ancho del boton*/
+height: 40px; /*altura del boton*/
+border-radius: 50%; /*hacer los botones circulares*/
+background-color: cadetblue; /*fondo del boton gris medio*/
+transition: background-color 0.3s; /*Transicion suave al cambiar el color de fondo*/
+}
+
+/*estilos para los botones de redes sociales al pasar el cursor*/
+.footer-social a:hover{
+    background-color: aqua; /*cambiar a color aqua al pasar el cursor*/
+}
+
+/*Estilo para los iconos SVG dentro de los enlaces*/
+.footer-social svg{
+    width: 24px; /*ancho del icono*/
+    height: 24px; /*altura del icono*/
+    fill: azure; /*color del icono blanco*/
+}
+
+/*Estilos responsivos para pantallas de tamaño tablet y menores*/
+@media (max-width: 768px){
+.footer-container {
+    flex-direction: column; /*mentener los elementos en una columna*/
+    align-items: center; /*centrar los elementos horizontalmente*/
+}
+
+.footer-social {
+    flex-wrap: wrap; /*permitir que los iconos se envuelvan en multiples filas si es necesario*/
+    gap: 10px; /*Espacio entre los iconos*/
+}
+.footer-social a {
+    width: 35px; /*reducir el ancho del boton*/
+    height: 35px; /*reducir la altura del boton*/
+}
+
+.footer-social svg {
+width: 20px; /*reducir el ancho del icono*/
+height: 20px; /*reducir la altura del icono*/
+}
+}
+
+/*estilo resposivos para pantallas del tamaño movil*/
+@media (max-width: 480px) {
+    footer {
+        padding: 15px 0; /*Reducir el espaciado interno arriba y abajo*/
+
+    }
+    .footer-info {
+        margin-bottom: 5px; /*redurir el espacio debajo de la informacion*/
+        font-size: 14px; /*reducir el tamaño de la fuente*/
+    }
+}
+/* Ajuste de color para mantener la identidad verde de la pagina */
+footer{
+    background-color: rgb(20, 47, 44);
+    border-top: 1px solid rgba(174, 198, 184, 0.2);
+}
+
+.footer-social a{
+    background-color: rgb(72, 119, 105);
+    border-radius: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.footer-social a:hover{
+    background-color: rgb(126, 163, 146);
+    transform: translateY(-2px);
+}
+
+footer{
+    background: linear-gradient(90deg, rgb(20, 47, 44), rgb(38, 83, 72));
+    border-top: 1px solid rgba(191, 225, 210, 0.22);
+    box-shadow: 0 -6px 18px rgba(8, 30, 25, 0.22);
+}
+
+.footer-social a{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgb(66, 128, 108);
+    box-shadow: 0 0 0.55rem rgba(153, 231, 202, 0.26);
+    transition: background-color 0.3s ease,
+                box-shadow 0.3s ease,
+                transform 0.3s ease;
+}
+
+.footer-social a:hover{
+    background-color: rgb(104, 166, 145);
+    box-shadow: 0 0 1rem rgba(158, 238, 208, 0.72);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Ajuste final: footer integrado al fondo general */
+footer{
+    background: transparent;
+    border-top: none;
+    box-shadow: none;
+}
+
+.footer-container{
+    border-radius: 1.25rem;
+}
+
+.footer-social a{
+    border-radius: 50%;
+}

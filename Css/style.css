@@ -1,0 +1,533 @@
+/*Asi son como se hacen los comentarios en Css*/
+/*Comentario en css*/
+/*
+Comentario múltiple
+línea
+*/
+:root {
+    --body-bg-color: rgb(43,43,70);
+    --text-color: white;
+    --colorh1-color: rgb(215, 211, 211);
+    --fondo-proyecto: rgb(60,43,70); /*agregado en la clase 5: flexbox*/
+}
+/*Aplicando variable creada en el root al body de nuestra web*/
+/*Reemplazamos el body con el uso de variables css*/
+body{
+    display: flex;               /*agregado en la clase 4*/
+    flex-direction: column;      /*agregado en la clase 4*/
+    background:rgb(103, 123, 123);
+    color:black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+h1, h2 {
+    color: var(--colorh1-color);
+}
+
+/*título del Header*/
+header{ 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1rem 3rem; 
+} 
+titulo{ 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1rem 3rem; 
+} 
+/*Barra de navegación*/ 
+.navigation { 
+    display: flex;          /* Coloca los elementos uno al lado del otro */ 
+    justify-content: flex-end; /* Los lleva hacia la derecha */ 
+    align-items: center; 
+    gap: 1.5rem;            /* Espacio entre botones */ 
+    list-style: none;       /* Quita los puntos de la lista */ 
+    margin: 0; 
+    padding: 0; 
+}
+
+.navigation{
+    display: flex; /* Utiliza Flexbox para organizar los elementos hijos (items de navegación) en una fila flexible. */
+    gap: 3rem; /* Establece un espacio de 3 rem entre cada elemento hijo dentro del contenedor flex. */
+    list-style: none; /* Elimina los puntos de lista predeterminados de los elementos de la lista. */
+    justify-content: flex-end; /* Alinea los elementos hijos al final del contenedor flex, a la derecha. */
+    margin:0 3rem; /* Establece un margen de 0 en la parte superior e inferior y de 3 rem en los lados izquierdo y derecho. */
+}
+/*Enlaces de la barra de navegación configurados como si fueran botones*/
+
+.navigation li {
+    display: flex;
+    font-size: 1rem;
+    width: 100px;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color:rgb(61, 131, 114);
+    box-shadow: 0 0 0.5rem rgba(219, 250, 233, 0.5);
+    transition: 0.3s;
+}
+
+.navigation li:hover{
+    background: rgb(241, 250, 243);
+    transform: translateY(-3px);
+}
+
+a{
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces. */
+    color:black; /* Establece el color del texto de los enlaces. */
+}
+
+*{
+    box-sizing: border-box;
+
+}
+/*estilo de los enlaces de la barra de navegación*/
+
+/*Todo lo que contiene el main*/
+.main-container{
+    display: flex;
+    flex-direction:column;
+}
+
+
+/* Cuerpo de la página*/
+body { 
+    color: rgb(215, 211, 211); /*color general del texto*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*tipo de fuente*/
+ 
+    background: linear-gradient( 
+        135deg, /*direccion del degradado*/
+        rgb(11, 19, 19), /*color inicial del degradado*/
+        rgb(84, 145, 145) /*color final del degradado*/
+    ); 
+ 
+    margin: 0; /*quita el margen por defecto del body*/
+    min-height: 100vh; /*altura minima igual a toda la pantalla*/
+}
+
+/* Media Queries agrupadas */
+
+/*Celular (Pantallas pequeñas hasta 768px)*/
+@media (max-width: 767px){
+    header { 
+        flex-direction: column; /*coloca titulo y navegacion uno debajo del otro*/ 
+        gap: 1rem; 
+        padding: 1rem;
+    }
+    .titulo{
+        justify-content: center;
+    }
+    .navigation{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    .container-sobremi{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem; /*margen a lo alto*/
+    line-height: 2.5rem; /* espaciado entre los párrafos del texto*/
+    font-size: small; /* tamaño de la fuente */
+    flex-direction: column;
+    }
+    /*Agregamos el responsivo de las secciones experiencia y estudios*/
+    .container-experiencia, 
+    .container-estudios{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .container-experiencia, 
+    .container-estudios{
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+        font-size: small;
+    }
+}
+
+/*Tableta (Pantallas medianas, entre 768px y 1023px)*/
+@media (min-width: 768px) and (max-width: 1023px){
+    .titulo{
+        justify-content: center;
+    }
+    .navigation{
+        gap: 2rem;
+        justify-content: center;
+    }
+    /*Agregamos el responsivo de las secciones experiencia y estudios*/
+    .container-experiencia, 
+    .container-estudios{
+        width: 75%;
+        margin: 4rem auto;
+    }
+}
+
+/* Escritorio (Pantallas anchas, 1024px y superiores) */
+@media (min-width: 1024px){
+    .titulo{
+        justify-content: flex-start;
+    }
+    .navigation{
+        gap: 3rem;
+        justify-content: flex-end;
+        margin: 0 3rem;
+    }
+    /*Agregamos el responsivo de las secciones experiencia y estudios*/
+    .container-experiencia, 
+    .container-estudios{
+        width: 75%;
+        margin: 5rem auto;
+    }
+}
+
+/* Ajustes visuales para mejorar la pagina */
+.main-container{
+    width: 100%;
+    align-items: center;
+}
+
+section{
+    width: 100%;
+    padding: 2rem 1.5rem;
+}
+
+.sobremi,
+.experiencia,
+.estudios,
+.proyecto,
+.contacto{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-sobremi{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    width: 85%;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: left;
+    margin: 0.5rem auto;
+}
+
+.container-sobremi h2{
+    margin: 0;
+    line-height: 1.7;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.img-perfil{
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.container-experiencia,
+.container-estudios{
+    width: 90%;
+    max-width: 1600px;
+    margin: 2rem auto;
+    padding: 3rem;
+}
+
+.container-estudios-section{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.proyecto{
+    width: 100%;
+}
+
+.proyecto > h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.galeria-proyecto,
+.galería-proyecto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.proyecto,
+.galeria-proyecto > .proyecto,
+.galería-proyecto > .proyecto{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    min-height: 430px;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 1rem rgba(6, 255, 234, 0.18);
+}
+
+.proyecto img,
+.galeria-proyecto > .proyecto img,
+.galería-proyecto > .proyecto img{
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    display: block;
+}
+
+.proyecto h3,
+.galeria-proyecto > .proyecto h3,
+.galería-proyecto > .proyecto h3{
+    margin: 1rem 0 0.75rem;
+}
+
+.proyecto p,
+.galeria-proyecto > .proyecto p,
+.galería-proyecto > .proyecto p{
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.proyecto a,
+.galeria-proyecto > .proyecto a,
+.galería-proyecto > .proyecto a{
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-right: 0.4rem;
+}
+
+.contacto{
+    width: 100%;
+    text-align: center;
+}
+
+.contacto h2{
+    width: 100%;
+    text-align: center;
+}
+
+.formulario-contacto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.formulario-contacto iframe{
+    width: min(900px, 90vw);
+    max-width: 100%;
+}
+
+@media (max-width: 767px){
+    section{
+        padding: 1.5rem 1rem;
+    }
+
+    .container-sobremi{
+        width: 92%;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .container-experiencia,
+    .container-estudios{
+        width: 92%;
+        margin: 1.5rem auto;
+        padding: 1.5rem;
+    }
+
+    .container-estudios-section{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .galeria-proyecto,
+    .galería-proyecto{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .proyecto,
+    .galeria-proyecto > .proyecto,
+    .galería-proyecto > .proyecto{
+        width: 92%;
+        max-width: 360px;
+        min-height: auto;
+    }
+
+    .proyecto img,
+    .galeria-proyecto > .proyecto img,
+    .galería-proyecto > .proyecto img{
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .container-sobremi,
+    .container-experiencia,
+    .container-estudios{
+        width: 85%;
+        margin: 3rem auto;
+    }
+
+    .proyecto,
+    .galeria-proyecto > .proyecto,
+    .galería-proyecto > .proyecto{
+        width: calc(50% - 1rem);
+        max-width: 360px;
+    }
+}
+
+@media (min-width: 1024px){
+    .container-sobremi,
+    .container-experiencia,
+    .container-estudios{
+        width: 80%;
+        margin: 3rem auto;
+    }
+}
+
+/* Identidad visual */
+:root{
+    --verde-profundo: rgb(24, 63, 58);
+    --verde-medio: rgb(57, 112, 99);
+    --verde-salvia: rgb(111, 148, 133);
+    --verde-claro: rgb(174, 198, 184);
+    --gris-verde: rgb(38, 53, 51);
+    --superficie-verde: rgba(42, 73, 67, 0.88);
+    --texto-suave: rgb(225, 235, 230);
+}
+
+body{
+    background: linear-gradient(135deg, rgb(19, 31, 30), rgb(45, 77, 70));
+    color: var(--texto-suave);
+}
+
+header{
+    width: 100%;
+    background: rgba(20, 47, 44, 0.88);
+    border-bottom: 1px solid rgba(174, 198, 184, 0.25);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.navigation li{
+    background-color: var(--verde-medio);
+    border-radius: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.navigation li:hover{
+    background-color: var(--verde-claro);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.22);
+}
+
+section{
+    padding: 3rem 1.5rem;
+}
+
+.container-sobremi,
+.container-estudios{
+    background-color: var(--superficie-verde);
+    border-radius: 3px;
+    border-left: 5px solid var(--verde-salvia);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.container-experiencia{
+    background: rgba(66, 191, 176, 0.72);
+    border-left: 5px solid var(--verde-salvia);
+    padding: 2.5rem 3rem;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.img-perfil{
+    border-radius: 2px;
+    box-shadow: 10px 10px 0 rgba(111, 148, 133, 0.32);
+}
+
+.proyecto > h2{
+    margin-bottom: 2.5rem;
+}
+
+.contacto{
+    background: rgba(27, 52, 49, 0.34);
+}
+
+@media (max-width: 767px){
+    section{
+        padding: 2rem 1rem;
+    }
+}
+
+header{
+    background: linear-gradient(90deg, rgb(24, 62, 54), rgb(49, 102, 87));
+    border-bottom: 1px solid rgba(191, 225, 210, 0.22);
+    box-shadow: 0 6px 18px rgba(8, 30, 25, 0.28);
+}
+
+.navigation li{
+    border-radius: 1.2rem;
+    background-color: rgb(66, 128, 108);
+    box-shadow: 0 0 0.6rem rgba(153, 231, 202, 0.28);
+    transition: background-color 0.3s ease,
+                box-shadow 0.3s ease,
+                transform 0.3s ease;
+}
+
+.navigation li:hover{
+    background-color: rgb(104, 166, 145);
+    box-shadow: 0 0 1rem rgba(158, 238, 208, 0.7);
+    transform: translateY(-3px);
+}
+
+.navigation li a{
+    width: 100%;
+    color: rgb(245, 250, 247);
+}
+
+/* Ajuste final: elementos redondeados sin franjas superior e inferior */
+header{
+    background: transparent;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+.navigation li{
+    border-radius: 1.25rem;
+}
+
+.container-sobremi,
+.container-experiencia,
+.container-estudios{
+    border-radius: 1.25rem;
+    border-left: none;
+    box-shadow: 0 10px 24px rgba(4, 24, 20, 0.28),
+                0 0 0.7rem rgba(112, 222, 181, 0.16);
+}
+
+.img-perfil{
+    border-radius: 1.25rem;
+    box-shadow: 0 0 0.8rem rgba(112, 222, 181, 0.26);
+}
+
+.formulario-contacto iframe{
+    border-radius: 1.25rem;
+    overflow: hidden;
+}

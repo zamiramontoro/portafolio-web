@@ -1,0 +1,123 @@
+.estudios{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    color:azure;
+}
+
+.container-estudios{
+    width: 90%;
+    max-width: 1600px;
+    padding: 3rem;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2.5rem;
+    font-size: large;
+    background-color: rgb(70, 141, 127);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.40);
+    gap: 1rem;
+    align-items: center;
+}
+    
+.container-estudios h2 {
+    margin-top: 0;
+}
+
+.container-estudios h3,
+.container-estudios h4 {
+    color: rgb(235, 235, 235);
+}
+
+.container-estudios-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.container-estudios-section img {
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.container-estudios-section p {
+    margin: 0;
+}
+
+/* Media Queries agrupadas */
+
+/*Celular (Pantallas pequeñas hasta 768px)*/
+@media (max-width: 767px){
+    header { 
+        flex-direction: column; /*coloca titulo y navegacion uno debajo del otro*/ 
+        gap: 1rem; 
+        padding: 1rem;
+    }
+    .titulo{
+        justify-content: center;
+    }
+    .navigation{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    .container-sobremi{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem; /*margen a lo alto*/
+    line-height: 2.5rem; /* espaciado entre los párrafos del texto*/
+    font-size: small; /* tamaño de la fuente */
+    flex-direction: column;
+    }
+    /*Agregamos el responsivo de las secciones experiencia y estudios*/
+    .container-estudios{
+        width: 100%;
+        margin: 0rem;
+    }
+    .estudios {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+        font-size: small;
+    }
+}
+
+/*Tableta (Pantallas medianas, entre 768px y 1023px)*/
+@media (min-width: 768px) and (max-width: 1023px){
+    .titulo{
+        justify-content: center;
+    }
+    .navigation{
+        gap: 2rem;
+        justify-content: center;
+    }
+    /*Agregamos el responsivo de las secciones experiencia y estudios*/
+    .estudios{
+        width: 75%;
+    }
+}
+
+/* Escritorio (Pantallas anchas, 1024px y superiores) */
+@media (min-width: 1024px){
+    .titulo{
+        justify-content: flex-start;
+    }
+    .navigation{
+        gap: 3rem;
+        justify-content: flex-end;
+        margin: 0 3rem;
+    }
+    /*Agregamos el responsivo de las secciones experiencia y estudios*/
+    .estudios{
+        width: 75%;
+    }
+    .container-estudios-section{
+        display:flex;
+        align-items: center;
+        width: 100%;
+        gap: 2rem;
+    }
+}
